@@ -8,7 +8,7 @@ export default defineConfig({
     port: process.env.PORT || 5173,
     strictPort: true,
     cors: {
-      origin: ["https://movieon-w4po.onrender.com"],
+      origin: ["*"],
       credentials: true,
     }
   },
