@@ -10,10 +10,10 @@ export default defineConfig({
     cors: {
       origin: ["*"],
       credentials: true,
-    }
+    },
+    allowedHosts: ['movieon-w4po.onrender.com'], // Moved here
   },
   preview: {
-    allowedHosts: ['movieon-w4po.onrender.com'],
     port: process.env.PORT || 5173,
     host: true
   }
