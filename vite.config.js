@@ -9,6 +9,8 @@ export default defineConfig({
     host: true,  // Allows external access (useful for Render)
     port: process.env.PORT || 5173,  // Use Render's assigned port or default to 5173
     strictPort:true,
-    allowedHosts:["https://movieon-w4po.onrender.com"]
-  }
+    cors: {
+      origin: ["https://movieon-w4po.onrender.com"], // Allow your Render domain
+      credentials: true,
+    }  }
 })
