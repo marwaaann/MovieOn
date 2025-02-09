@@ -1,21 +1,20 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss(),],
+  plugins: [react()],
   server: {
-    host: true,  // Allows external access (useful for Render)
-    port: process.env.PORT || 5173,  // Use Render's assigned port or default to 5173
-    strictPort:true,
+    host: true,
+    port: process.env.PORT || 5173,
+    strictPort: true,
     cors: {
-      origin: ["https://movieon-w4po.onrender.com"], // Allow your Render domain
+      origin: ["https://movieon-w4po.onrender.com"],
       credentials: true,
-    }  },
-    preview: {
-      allowedHosts: ['movieon-w4po.onrender.com'],
-      port: process.env.PORT || 5173,
-      host: true
     }
+  },
+  preview: {
+    allowedHosts: ['movieon-w4po.onrender.com'],
+    port: process.env.PORT || 5173,
+    host: true
+  }
 })
